@@ -25,6 +25,7 @@ namespace React525AuthBookmarks.web.Controllers
 
         }
 
+        [AllowAnonymous]
         [HttpGet]
         [Route("toplinks")]
 
