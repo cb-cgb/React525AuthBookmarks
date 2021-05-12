@@ -27,6 +27,9 @@ import PrivateRoute from './PrivateRoute';
         <PrivateRoute exact path='/bookmarks' component={MyBookmarks}/> 
       </Layout>
     </AuthContextComponent>
+
+
+
     );
   }
 }

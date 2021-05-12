@@ -47,7 +47,7 @@ class MyBookmarks extends React.Component {
         const {newtitle} = this.state;
         console.log(newtitle);
         await axios.post('/api/bookmark/update',{id, title: newtitle,url,userId });
-        await this.setState({editids: [...this.state.editids.filter(bid => bid !== id)]});
+        await this.setState({editids: this.state.editids.filter(bid => bid !== id)});
         await console.log(this.state);
         this.refreshTable();
     }
