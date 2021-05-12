@@ -26,17 +26,16 @@ class MyBookmarks extends React.Component {
          const nextState = produce(this.state, draft => {
             draft[e.target.name] = e.target.value;            
         }) 
-       this.setState(nextState);
-        console.log(this.state);
+       this.setState(nextState);        
     } 
-    onTitleTextChange = e => {                     
+
+    /* onTitleTextChange = e => {                     
         const nextState = produce(this.state, draft => {
            draft[e.target.name] = e.target.value;            
        }) 
       
        this.setState(nextState);
-       console.log(this.state);
-   }
+   } */
 
     onClickEdit = (id) => {
       const editids = [...this.state.editids, id];
@@ -84,7 +83,7 @@ class MyBookmarks extends React.Component {
                         onClickUpdate={()=> this.onClickUpdate(l) }
                         onClickEdit={()=> this.onClickEdit(l.id)} 
                         isEdit = {this.state.editids.includes(l.id)}
-                        onTitleTextChange={this.onTitleTextChange}/>
+                        onTextChange={this.onTextChange}/>
                                    
                         )
                        }

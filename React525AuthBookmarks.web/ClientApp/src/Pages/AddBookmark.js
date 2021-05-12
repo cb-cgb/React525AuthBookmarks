@@ -28,11 +28,6 @@ class AddBookmark extends React.Component {
       this.setState(nextState);
     }
 
-    // onTextChange = e => {
-    //     const nextState = produce(this.state, draft => {
-    //         draft[e.target.name] = e.target.value;
-    //     });
-
     onSubmitForm  = async(e) => {
         e.preventDefault();
         const {userId} = this.state.user;
