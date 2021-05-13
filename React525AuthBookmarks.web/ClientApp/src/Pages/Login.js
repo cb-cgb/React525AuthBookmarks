@@ -35,8 +35,8 @@ class Login extends React.Component {
         const {data} =await axios.post('/api/account/login', this.state.user)
         const isValidLogin=!!data;
         this.setState({isValidLogin});       
-        setUser();
-        isValidLogin && this.props.history.push('/bookmarks');
+        await setUser();
+        isValidLogin &&  this.props.history.push('/bookmarks');
         this.resetUser(); //resets the login form to blank if invalid user/pw
     }
 

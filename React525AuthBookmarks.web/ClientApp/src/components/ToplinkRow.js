@@ -8,7 +8,7 @@ function  ToplinkRow(props)   {
 
             
           <tr>
-             <td><Link to={url}>{url}</Link></td>
+             <td><Link target="_blank" to={url}>{url}</Link></td>
              <td>{count}</td>
          </tr>
             
